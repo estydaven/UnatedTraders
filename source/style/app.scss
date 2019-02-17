@@ -1,0 +1,18 @@
+// DIMENSIONS
+$font-size:16px;
+
+// template
+@import "./template/mixins";
+@import "./template/adjustment";
+@import "./common/functions";
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/bootstrap-grid";
+
+// fonts
+@import './common/fonts';
+
+// pages
+@import 'pages/index';
+
+
