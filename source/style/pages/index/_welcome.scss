@@ -23,14 +23,17 @@
   padding-top: 24px;  
   @include laptop{
     flex-direction: column;
-  }
+  }  
+}
+.header__logo{
   @include phone{
-    padding-top: 70px;
+    padding-right: 56px;
   }
 }
-
 .nav{
   flex: 0 0 42%;
+  margin-left: -140px;
+  padding-bottom: 7px;
 }
 .nav__icon{
     display: none;
@@ -42,9 +45,9 @@
 
    @include laptop {
     display: inline-block;
-    position: fixed;
+    position: absolute;
     right: 11px;
-    top: 5px;
+    top: 24px;
    }
 
    span{
@@ -66,7 +69,7 @@
       top: 13px;
     }
     &:nth-child(3) {
-      top: 27px;
+      top: 25px;
     }
     &:nth-child(4) {
       top: 26px;
@@ -75,6 +78,7 @@
 }
 .nav.menu_state_open {
 	.nav__icon {
+    position: fixed;
 		span {
 			&:nth-child(1) {
 				top: 18px;
@@ -83,11 +87,11 @@
 			}
 			&:nth-child(2) {
         transform: rotate(45deg);
-        top: 24px;
+        top: 26px
 			}
 			&:nth-child(3) {
         transform: rotate(-45deg);
-        top: 22px;
+        top: 26px;
 			}
 			&:nth-child(4) {
 				top: 18px;
@@ -161,10 +165,14 @@
 	transform-origin :0 0;
   transition: .5s ease-in-out;  
   @include laptop{
-    right: 182px;
+    right: 160px;
     top: 12px;
     left: auto;
-  }     
+  }  
+  @include phone{
+    width: 24%;
+    right: 120px;
+  }   
 }
 .submenu__item{
   display: block;
@@ -189,10 +197,15 @@
 
 .header-login{
   flex: 0 0 10%;
+  padding-bottom: 7px;
   @include laptop{
     position: absolute;
     right: 6px;
-    top: 40px;
+    top: 58px;
+  }
+  @include tablet{
+    right: 8px;
+    top: 65px;
   }
 }
 .header-login__list{
@@ -227,8 +240,8 @@
   font-style: normal;
   font-weight: 300;
   @include phone{
-    padding-top: 40px;
-    padding-bottom: 44px;
+    padding-top: 20px;
+    padding-bottom: 30px;
     font-size: 38px;
   }
 }
@@ -244,6 +257,9 @@
 
 .l-main{
   padding: 80px 0;
+  @include phone{
+    padding: 40px 0;
+  }
 }
 .body-title{
     color: #000;
@@ -253,11 +269,22 @@
 }
 .main-container{
   padding-top: 32px;
+  &_phone{
+    @include phone{
+      padding-top: 0;
+    }
+  }
 }
 .block{
     display: flex;
     flex-direction: column;    
-    padding: 40px 35px 30px 35px;
+    padding: 40px 30px 30px 30px;
+    @include desktop{
+      padding: 40px 0 30px 0;
+    }
+    @include phone{
+      padding: 0 0 20px 0;
+    }
 }
 .block-main{
   display: flex;
@@ -288,6 +315,9 @@
   color: #1657AB;
   font-size: 14px;
   text-decoration: none;
+  &_paragraph-link{
+    font-size: 16px;
+  }
   &:hover{
     text-decoration: underline;
   }
@@ -301,6 +331,10 @@
 .main-button{
   text-align: center;
   padding-bottom: 80px;
+  padding-top: 45px;
+  @include phone{
+    padding-top: 0;
+  }
 }
 .button{
   background: transparent;
@@ -324,6 +358,9 @@
 }
 .partners{
   padding: 30px 0 80px 0;  
+  @include phone{
+    padding: 30px 0;
+  }
 }
 .partners__block{
   margin-right: 35px;
